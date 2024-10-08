@@ -1,0 +1,47 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Declaración de características de hardware requeridas -->
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true"/>
+
+    <!-- Permisos necesarios -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- Permisos de almacenamiento para Android 12 y anteriores -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- Permisos de almacenamiento para Android 13 y superiores -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"
+        android:required="false"/>
+
+    <!-- Opcional: Permiso para acceso amplio al almacenamiento en Android 11+ -->
+    <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/> -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/baseline_add_a_photo_24"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/baseline_add_a_photo_24"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practica06_22110092"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

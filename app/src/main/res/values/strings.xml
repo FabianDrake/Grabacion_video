@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Practica06_22110092</string>
+    <string name="take_photo">Tomar Foto</string>
+    <string name="start_capture">Iniciar Grabación</string>
+    <string name="stop_capture">Detener Grabación</string>
+    <string name="select_image">Seleccionar Imagen</string>
+    <string name="select_video">Seleccionar Video</string>
+</resources>
